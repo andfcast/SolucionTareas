@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroTareasEntities.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace RegistroTareasLogicaNegocio.Interfaces
 {
-    internal interface IUsuarioBL
+    public interface IUsuarioBL
     {
+        RespuestaDto Insertar(UsuarioDto dto);
     }
 }

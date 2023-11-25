@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RegistroTareasEntities.DTO;
+using RegistroTareasLogicaNegocio.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +10,46 @@ namespace TareasWebAPI.Controllers
     [ApiController]
     public class TareaController : ControllerBase
     {
-        // GET: api/<TareaController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly ITareaBL _tareaBL;
+
+        public TareaController(ITareaBL tareaBL)
         {
-            return new string[] { "value1", "value2" };
+            _tareaBL = tareaBL;
+        }
+
+        // GET: api/<TareaController>
+        [HttpGet("[action]/{id}")]
+        public RespuestaDto Listar(int id)
+        {
+            return _tareaBL.Listar(id);
         }
 
         // GET api/<TareaController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("[action]/{id}")]
+        public RespuestaDto Obtener(int id)
         {
-            return "value";
+            return _tareaBL.ObtenerInfo(id);
         }
 
         // POST api/<TareaController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("[action]")]
+        public RespuestaDto Crear([FromBody] TareaDto dto)
         {
+            return _tareaBL.Insertar(dto);
         }
 
         // PUT api/<TareaController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("[action]/{id}")]
+        public RespuestaDto Actualizar(int id, [FromBody] TareaDto dto)
         {
+            return _tareaBL.Actualizar(dto);
         }
 
         // DELETE api/<TareaController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("[action]/{id}")]
+        public RespuestaDto Borrar(int id)
         {
+            return _tareaBL.Eliminar(id);
         }
     }
 }

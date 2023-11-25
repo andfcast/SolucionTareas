@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace RegistroTareasEntities.DTO
 {
-    internal class RespuestaDto
+    public class RespuestaDto
     {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
+        public Object Data { get; set; }
     }
 }

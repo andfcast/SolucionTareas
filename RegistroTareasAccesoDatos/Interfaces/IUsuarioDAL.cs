@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RegistroTareasEntities.DTO;
 
 namespace RegistroTareasAccesoDatos.Interfaces
 {
-    internal interface IUsuarioDAL
+    public interface IUsuarioDAL
     {
+        bool Crear(UsuarioDto dto, ref string error);
+        UsuarioDto ObtenerInfo(string nomUsuario);
     }
 }

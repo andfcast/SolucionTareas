@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RegistroTareasEntities.DTO;
 
 namespace RegistroTareasAccesoDatos.Interfaces
 {
-    internal interface ITareaDAL
+    public interface ITareaDAL
     {
+        List<TareaDto> Listar(int id);
+        TareaDto ObtenerInfo(int id);
+        bool Crear(TareaDto dto, ref string error);
+        bool Actualizar(TareaDto dto, ref string error);
+        bool Borrar(int id);
     }
 }
