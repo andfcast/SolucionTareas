@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "RegistroTareasAccesoDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RegistroTareasEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RegistroTareasAccesoDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistroTareasAccesoDatos.dll": {}
+        }
+      },
+      "RegistroTareasEntities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RegistroTareasEntities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistroTareasEntities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "RegistroTareasAccesoDatos/1.0.0": {
+      "type": "project",
+      "path": "../RegistroTareasAccesoDatos/RegistroTareasAccesoDatos.csproj",
+      "msbuildProject": "../RegistroTareasAccesoDatos/RegistroTareasAccesoDatos.csproj"
+    },
+    "RegistroTareasEntities/1.0.0": {
+      "type": "project",
+      "path": "../RegistroTareasEntities/RegistroTareasEntities.csproj",
+      "msbuildProject": "../RegistroTareasEntities/RegistroTareasEntities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "RegistroTareasAccesoDatos >= 1.0.0",
+      "RegistroTareasEntities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\DELL\\.nuget\\packages\\": {},
@@ -38,7 +76,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Pruebas\\SolucionTareas\\RegistroTareasAccesoDatos\\RegistroTareasAccesoDatos.csproj": {
+              "projectPath": "D:\\Pruebas\\SolucionTareas\\RegistroTareasAccesoDatos\\RegistroTareasAccesoDatos.csproj"
+            },
+            "D:\\Pruebas\\SolucionTareas\\RegistroTareasEntities\\RegistroTareasEntities.csproj": {
+              "projectPath": "D:\\Pruebas\\SolucionTareas\\RegistroTareasEntities\\RegistroTareasEntities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

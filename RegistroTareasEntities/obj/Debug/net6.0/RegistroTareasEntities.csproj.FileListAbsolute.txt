@@ -1,0 +1,11 @@
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\bin\Debug\net6.0\RegistroTareasEntities.deps.json
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\bin\Debug\net6.0\RegistroTareasEntities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\bin\Debug\net6.0\RegistroTareasEntities.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.AssemblyInfoInputs.cache
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.AssemblyInfo.cs
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.csproj.CoreCompileInputs.cache
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\refint\RegistroTareasEntities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\ref\RegistroTareasEntities.dll

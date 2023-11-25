@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RegistroTareasLogicaNegocio/1.0.0": {
+        "dependencies": {
+          "RegistroTareasAccesoDatos": "1.0.0",
+          "RegistroTareasEntities": "1.0.0"
+        },
+        "runtime": {
+          "RegistroTareasLogicaNegocio.dll": {}
+        }
+      },
+      "RegistroTareasAccesoDatos/1.0.0": {
+        "dependencies": {
+          "RegistroTareasEntities": "1.0.0"
+        },
+        "runtime": {
+          "RegistroTareasAccesoDatos.dll": {}
+        }
+      },
+      "RegistroTareasEntities/1.0.0": {
+        "runtime": {
+          "RegistroTareasEntities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RegistroTareasLogicaNegocio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RegistroTareasAccesoDatos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RegistroTareasEntities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

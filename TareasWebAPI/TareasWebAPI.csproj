@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RegistroTareasAccesoDatos\RegistroTareasAccesoDatos.csproj" />
+    <ProjectReference Include="..\RegistroTareasEntities\RegistroTareasEntities.csproj" />
+    <ProjectReference Include="..\RegistroTareasLogicaNegocio\RegistroTareasLogicaNegocio.csproj" />
+  </ItemGroup>
+
 </Project>

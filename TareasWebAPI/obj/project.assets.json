@@ -88,6 +88,43 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "RegistroTareasAccesoDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RegistroTareasEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RegistroTareasAccesoDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistroTareasAccesoDatos.dll": {}
+        }
+      },
+      "RegistroTareasEntities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RegistroTareasEntities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistroTareasEntities.dll": {}
+        }
+      },
+      "RegistroTareasLogicaNegocio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RegistroTareasAccesoDatos": "1.0.0",
+          "RegistroTareasEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RegistroTareasLogicaNegocio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegistroTareasLogicaNegocio.dll": {}
+        }
       }
     }
   },
@@ -429,10 +466,28 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "RegistroTareasAccesoDatos/1.0.0": {
+      "type": "project",
+      "path": "../RegistroTareasAccesoDatos/RegistroTareasAccesoDatos.csproj",
+      "msbuildProject": "../RegistroTareasAccesoDatos/RegistroTareasAccesoDatos.csproj"
+    },
+    "RegistroTareasEntities/1.0.0": {
+      "type": "project",
+      "path": "../RegistroTareasEntities/RegistroTareasEntities.csproj",
+      "msbuildProject": "../RegistroTareasEntities/RegistroTareasEntities.csproj"
+    },
+    "RegistroTareasLogicaNegocio/1.0.0": {
+      "type": "project",
+      "path": "../RegistroTareasLogicaNegocio/RegistroTareasLogicaNegocio.csproj",
+      "msbuildProject": "../RegistroTareasLogicaNegocio/RegistroTareasLogicaNegocio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "RegistroTareasAccesoDatos >= 1.0.0",
+      "RegistroTareasEntities >= 1.0.0",
+      "RegistroTareasLogicaNegocio >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -467,7 +522,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Pruebas\\SolucionTareas\\RegistroTareasAccesoDatos\\RegistroTareasAccesoDatos.csproj": {
+              "projectPath": "D:\\Pruebas\\SolucionTareas\\RegistroTareasAccesoDatos\\RegistroTareasAccesoDatos.csproj"
+            },
+            "D:\\Pruebas\\SolucionTareas\\RegistroTareasEntities\\RegistroTareasEntities.csproj": {
+              "projectPath": "D:\\Pruebas\\SolucionTareas\\RegistroTareasEntities\\RegistroTareasEntities.csproj"
+            },
+            "D:\\Pruebas\\SolucionTareas\\RegistroTareasLogicaNegocio\\RegistroTareasLogicaNegocio.csproj": {
+              "projectPath": "D:\\Pruebas\\SolucionTareas\\RegistroTareasLogicaNegocio\\RegistroTareasLogicaNegocio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

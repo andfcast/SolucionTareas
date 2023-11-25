@@ -1,0 +1,17 @@
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasLogicaNegocio.deps.json
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasLogicaNegocio.dll
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasLogicaNegocio.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasAccesoDatos.dll
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasEntities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasAccesoDatos.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\bin\Debug\net6.0\RegistroTareasEntities.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.csproj.AssemblyReference.cache
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.AssemblyInfoInputs.cache
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.AssemblyInfo.cs
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.csproj.CoreCompileInputs.cache
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.csproj.CopyComplete
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.dll
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\refint\RegistroTareasLogicaNegocio.dll
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\ref\RegistroTareasLogicaNegocio.dll
