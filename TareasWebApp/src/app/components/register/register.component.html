@@ -1,0 +1,47 @@
+
+<div class="login">
+    <div class="registro">                        
+        <form [formGroup]="formRegistro" (ngSubmit)="Registrar()">
+            <div>
+                <h1>Registro Nuevo Usuario</h1>
+            </div>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Nombres y Apellidos</mat-label>
+                <input matInput autocomplete="off" type="text" formControlName="nombre">
+                <mat-error *ngIf="formRegistro.get('nombre')?.touched && formRegistro.get('nombre')?.errors?.['required']">                            
+                    El nombre es obligatorio                         
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Correo electrónico(será tu usuario de acceso)</mat-label>
+                <input matInput autocomplete="off" formControlName="usuario">
+                <mat-error *ngIf="formRegistro.get('usuario')?.touched && formRegistro.get('usuario')?.errors?.['required']">                            
+                    El correo electrónico es obligatorio                         
+                </mat-error>
+                <mat-error *ngIf="formRegistro.get('usuario')?.touched && formRegistro.get('usuario')?.errors?.['email']">                            
+                    Formato inválido de correo                         
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput autocomplete="off" type="password" formControlName="pass">
+                <mat-error *ngIf="formRegistro.get('pass')?.touched && formRegistro.get('pass')?.errors?.['required']">                            
+                    El password es obligatorio                         
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Confirmar Contraseña</mat-label>
+                <input matInput autocomplete="off" type="password" formControlName="confirmPass">
+                <mat-error *ngIf="formRegistro.get('confirmPass')?.touched && formRegistro.get('confirmPass')?.errors?.['required']">                            
+                    Debe confirmar la contraseña                        
+                </mat-error>
+                <mat-error *ngIf="formRegistro.get('confirmPass')?.touched && formRegistro.get('confirmPass')?.errors?.['confirmacion']">                            
+                    Las contraseñas no coinciden                       
+                </mat-error>
+            </mat-form-field>
+            <br />
+            <br />
+            <button type="submit" class="ancho boton" mat-raised-button color="accent" [disabled]="formRegistro.invalid">Ingresar</button>
+         </form>         
+    </div>    
+</div>

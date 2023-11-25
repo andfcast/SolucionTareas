@@ -1,0 +1,33 @@
+<div class="login">        
+    <div>
+        <h1>Inicio de sesión</h1>
+        <br />
+        <br />
+        <form [formGroup]="formLogin" (ngSubmit)="Login()">
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput autocomplete="off" formControlName="usuario">
+                <mat-error *ngIf="formLogin.get('usuario')?.touched && formLogin.get('usuario')?.errors?.['required']">                            
+                    El usuario es obligatorio                         
+                </mat-error>
+                <mat-error *ngIf="formLogin.get('usuario')?.touched && formLogin.get('usuario')?.errors?.['email']">                            
+                    Formato inválido de correo                         
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput autocomplete="off" type="password" formControlName="pass">
+                <mat-error *ngIf="formLogin.get('pass')?.touched && formLogin.get('pass')?.errors?.['required']">                            
+                    El password es obligatorio                         
+                </mat-error>
+            </mat-form-field>
+            <br />
+            <br />
+            <button type="submit" class="ancho boton" mat-raised-button color="accent" [disabled]="formLogin.invalid">Ingresar</button>
+         </form>
+         <br />
+         <div class="form-group">
+            <a href="/registrar">Registrarse</a>
+          </div>
+    </div>    
+</div>
