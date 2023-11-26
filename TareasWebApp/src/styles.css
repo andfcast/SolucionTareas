@@ -26,6 +26,12 @@ body { background-color:lightgrey !important; margin: 0; font-family: Roboto, "H
     height:50px;
     font-size: large;
 }
+.cabecera-tabla{
+    background-color: #ffd740 !important;
+    color:black !important;
+    align-content: center;
+    justify-content: center;
+}
 .spinner{
     margin: 0 auto;
 }

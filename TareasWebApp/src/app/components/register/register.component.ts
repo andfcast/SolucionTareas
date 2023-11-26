@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { Usuario } from '../../classes/usuario';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  formRegistro: FormGroup;
+  formRegistro: FormGroup;  
+  usuario:Usuario = new Usuario();
 
   constructor(private fb: FormBuilder,
     private service: UsuarioService,    
@@ -27,8 +30,6 @@ export class RegisterComponent {
   }
 
   ngOnInit(){
-
-
   }
 
   CoincidePassword(controlPass:any, controlConfirma:any){
@@ -48,6 +49,47 @@ export class RegisterComponent {
   }
 
   Registrar(){
-
+    const valoresForm = this.formRegistro.value;      
+    this.usuario.nombre = valoresForm.nombre;
+    this.usuario.email = valoresForm.usuario;
+    this.usuario.pass = valoresForm.pass;    
+    debugger;    
+    this.service.Crear(this.usuario).subscribe((data:any) =>{
+      if(data.exitoso){
+        Swal.fire({
+        text: 'Creación exitosa',
+        icon: 'success',
+        timer:2000,
+        confirmButtonColor: '#a01533',
+        confirmButtonText: 'Aceptar'
+      }); 
+      }   
+      else{
+        Swal.fire({
+        title: '¡Error!',
+        text: data.mensaje,
+        icon: 'error',
+        timer:2000,
+        confirmButtonColor: '#a01533',
+        confirmButtonText: 'Aceptar'
+      });
+      }   
+      setTimeout(() => {           
+        this.router.navigateByUrl('/');    
+      },1500);
+    },
+    error =>{
+      Swal.fire({
+        title: '¡Error!',
+        text: 'Creación no realizada',
+        icon: 'error',
+        timer:2000,
+        confirmButtonColor: '#a01533',
+        confirmButtonText: 'Aceptar'
+      });
+    });
+  }
+  Volver(){
+    this.router.navigateByUrl('Login');
   }
 }

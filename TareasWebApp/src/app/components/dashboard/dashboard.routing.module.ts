@@ -36,7 +36,7 @@ export const routes: Routes = [
         },
      },
      {
-      path: 'crearTarea',
+      path: 'nuevaTarea',
       component: CrearTareaComponent,
       data: {
         title: 'Agregar Nueva Tarea'

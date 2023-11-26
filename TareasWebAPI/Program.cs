@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using RegistroTareasAccesoDatos.Implementacion;
+using RegistroTareasAccesoDatos.Interfaces;
 using RegistroTareasEntities.BDEntities;
+using RegistroTareasLogicaNegocio.Implementacion;
+using RegistroTareasLogicaNegocio.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +25,13 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddDbContext<RegistroTareasBDContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("RegistroBDConnection")));
+
+builder.Services.AddTransient<IAutenticacionBL, AutenticacionBL>();
+builder.Services.AddTransient<IAutenticacionDAL, AutenticacionDAL>();
+builder.Services.AddTransient<ITareaBL, TareaBL>();
+builder.Services.AddTransient<ITareaDAL, TareaDAL>();
+builder.Services.AddTransient<IUsuarioBL, UsuarioBL>();
+builder.Services.AddTransient<IUsuarioDAL, UsuarioDAL>();
 
 var app = builder.Build();
 

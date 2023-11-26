@@ -22,7 +22,9 @@ namespace RegistroTareasAccesoDatos.Implementacion
                     error = "Ya existe un registro con los mismos valores. Favor revisar";
                     return false;
                 }
-                _context.Usuarios.Add(Convertidor.AUsuario(dto));
+                Usuario nuevoUsuario = Convertidor.AUsuario(dto);
+                nuevoUsuario.FechaCreacion = DateTime.Now;
+                _context.Usuarios.Add(nuevoUsuario);
                 _context.SaveChanges();
                 return true;
             }
