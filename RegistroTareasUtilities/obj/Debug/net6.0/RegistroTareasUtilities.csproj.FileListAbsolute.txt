@@ -1,0 +1,16 @@
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\bin\Debug\net6.0\RegistroTareasUtilities.deps.json
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\bin\Debug\net6.0\RegistroTareasUtilities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\bin\Debug\net6.0\RegistroTareasUtilities.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\bin\Debug\net6.0\RegistroTareasEntities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\bin\Debug\net6.0\RegistroTareasEntities.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.csproj.AssemblyReference.cache
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.AssemblyInfoInputs.cache
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.AssemblyInfo.cs
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.csproj.CoreCompileInputs.cache
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.sourcelink.json
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.csproj.CopyComplete
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\refint\RegistroTareasUtilities.dll
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\RegistroTareasUtilities.pdb
+D:\Pruebas\SolucionTareas\RegistroTareasUtilities\obj\Debug\net6.0\ref\RegistroTareasUtilities.dll

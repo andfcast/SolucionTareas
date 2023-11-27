@@ -24,10 +24,11 @@ export class TareaComponent {
   }
 
   private ListarTareas(){
-    this.service.Listar(1).subscribe((res:any) =>{
+    const userId = JSON.parse(localStorage.getItem('userInfo')!).id;
+    this.service.Listar(userId).subscribe((res:any) =>{
       if(res.data != null){    
         this.lstTareas = [];    
-        res.data.forEach((element:any) => {          
+        res.data.forEach((element:Tarea) => {              
           this.lstTareas.push(element);
         });        
       }      
@@ -36,10 +37,57 @@ export class TareaComponent {
   }
 
   Crear(){
-    this.router.navigateByUrl(Utilities.CambioUrl(this.router.url,1) +'/nuevaTarea');
+    this.router.navigateByUrl('dashboard/nuevaTarea');
   }
   Actualizar(id:number){
-    this.router.navigateByUrl(Utilities.CambioUrl(this.router.url,1) +'/ActualizarTarea/' + id.toString())
+    this.router.navigateByUrl('dashboard/editarTarea/' + id.toString())
+  }
+  Completar(row:Tarea){  
+    Swal.fire({
+      title: '¿Está seguro de completar la tarea?',
+        confirmButtonText: 'Confirmar',
+        confirmButtonColor: 'green',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: 'red'
+        }).then((result) => {
+          if (result.value) {
+            const request = row;
+            request.esCompletada = !request.esCompletada;
+            this.service.Actualizar(request).subscribe((data: any) => {
+              if (data.exitoso) {
+                Swal.fire({
+                  confirmButtonColor: '#a01533',
+                  showConfirmButton: false,
+                  timer:2000,
+                  text:'Tarea completada correctamente.',
+                  icon:'success'
+                });
+                // setTimeout(() => {                              
+                  this.ListarTareas();
+                // }, 1500);
+              }
+              else{
+                Swal.fire({
+                title: '¡Error!',
+                text: data.mensaje,
+                icon: 'error',
+                timer:2000,
+                confirmButtonColor: '#a01533',
+                confirmButtonText: 'Aceptar'
+              });
+              }   
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire({
+              title:'Cancelado',
+              text:'Cambio cancelado',
+              icon:'info',
+              showConfirmButton:false,
+              timer:2000
+            });
+          }
+        });  
   }
   Borrar(id:number){
     Swal.fire({

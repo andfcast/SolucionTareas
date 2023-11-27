@@ -13,3 +13,4 @@ D:\Pruebas\SolucionTareas\RegistroTareasAccesoDatos\obj\Debug\net6.0\RegistroTar
 D:\Pruebas\SolucionTareas\RegistroTareasAccesoDatos\obj\Debug\net6.0\refint\RegistroTareasAccesoDatos.dll
 D:\Pruebas\SolucionTareas\RegistroTareasAccesoDatos\obj\Debug\net6.0\RegistroTareasAccesoDatos.pdb
 D:\Pruebas\SolucionTareas\RegistroTareasAccesoDatos\obj\Debug\net6.0\ref\RegistroTareasAccesoDatos.dll
+D:\Pruebas\SolucionTareas\RegistroTareasAccesoDatos\obj\Debug\net6.0\RegistroTareasAccesoDatos.sourcelink.json

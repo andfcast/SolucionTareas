@@ -63,7 +63,7 @@ namespace RegistroTareasEntities.BDEntities
 
                 entity.Property(e => e.Nombre).HasMaxLength(50);
 
-                entity.Property(e => e.Password).HasColumnType("ntext");
+                entity.Property(e => e.Password).HasMaxLength(100);
             });
 
             OnModelCreatingPartial(modelBuilder);

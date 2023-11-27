@@ -5,7 +5,7 @@ namespace RegistroTareasEntities.Utilities
     public static class Convertidor
     {
         #region Usuario
-        public static Usuario AUsuario(UsuarioDto dto)
+        public static Usuario AUsuario(RegistroUsuarioDto dto)
         {
             return new Usuario
             {
@@ -16,14 +16,24 @@ namespace RegistroTareasEntities.Utilities
             };
         }
 
-        public static UsuarioDto AUsuarioDto(Usuario entidad)
+        public static RegistroUsuarioDto AUsuarioDto(Usuario entidad)
         {
-            return new UsuarioDto
+            return new RegistroUsuarioDto
             {
                 Id = entidad.Id,
                 Nombre = entidad.Nombre,
                 Email = entidad.Email,
                 Pass = entidad.Password
+            };
+        }
+
+        public static AutenticadoDto AUsuarioAutenticadoDto(Usuario entidad)
+        {
+            return new AutenticadoDto
+            {
+                Id = entidad.Id,
+                Nombre = entidad.Nombre,
+                Email = entidad.Email,                
             };
         }
         #endregion

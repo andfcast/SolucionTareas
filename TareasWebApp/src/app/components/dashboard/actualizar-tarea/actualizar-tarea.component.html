@@ -1,1 +1,78 @@
-<p>actualizar-tarea works!</p>
+<form [formGroup]="formTarea" (ngSubmit)="Guardar()">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>       
+                <h1 class="titulo-modulo"><mat-icon class="icono-modulo">supervised_user_circle</mat-icon>Editar Tarea</h1>
+            </mat-card-title>
+        </mat-card-header>
+        <br />
+        <br />
+        <br />
+        <mat-card-content>
+            <div class="row">
+                <div class="col-6 col-md-6 col-sm-12">                
+                    <mat-form-field appearance="outline" style="width:100%">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput autocomplete="off" formControlName="nombre" id="nombre" maxlength="100">   
+                        <mat-error *ngIf="formTarea.get('nombre')?.touched && formTarea.get('nombre')?.errors?.['required']">                            
+                            El nombre es obligatorio
+                        </mat-error>                                              
+                    </mat-form-field>                                  
+                </div>                                            
+                <div class="col-2 col-md-2 col-sm-6">                
+                    <mat-form-field appearance="outline" style="width:100%">
+                        <mat-label>Fecha Inicio</mat-label>
+                        <input matInput readonly [matDatepicker]="picker1" formControlName="fechaInicio" id="fechaInicio">                        
+                        <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1 disabled="false"></mat-datepicker> 
+                        <mat-error *ngIf="formTarea.get('fechaInicio')?.touched && formTarea.get('fechaInicio')?.errors?.['required']">                            
+                            La fecha de inicio es obligatoria
+                        </mat-error>                                                                    
+                    </mat-form-field>                                   
+                </div>   
+                <div class="col-2 col-md-2 col-sm-6">                
+                    <mat-form-field appearance="outline" style="width:100%">
+                        <mat-label>Fecha Fin</mat-label>
+                        <input matInput readonly [matDatepicker]="picker2" formControlName="fechaFin" id="fechaFin">                        
+                        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>    
+                        <mat-error *ngIf="formTarea.get('fechaFin')?.touched && formTarea.get('fechaFin')?.errors?.['required']">                            
+                            La fecha de fin es obligatoria
+                        </mat-error>                                            
+                    </mat-form-field>                                  
+                </div>
+                <div class="col-2 col-md-2 col-sm-12">
+                    <mat-form-field appearance="outline" style="width:100%">
+                        <mat-label># de Horas</mat-label>                        
+                        <input matInput autocomplete="off" type="number" min="1" max="1000" step="0.1" maxlength="4" formControlName="horas" id="horas">
+                        <mat-error *ngIf="formTarea.get('horas')?.touched && formTarea.get('horas')?.errors?.['required']">                           
+                            El valor es obligatorio                        
+                        </mat-error>
+                        <mat-error *ngIf="formTarea.get('horas')?.touched && formTarea.get('horas')?.errors?.['min']">                           
+                            El valor no puede ser menor a 1                        
+                        </mat-error>                                                 
+                        <mat-error *ngIf="formTarea.get('horas')?.touched && formTarea.get('horas')?.errors?.['max']">                           
+                            El valor no puede ser mayor a 1000                        
+                        </mat-error>                                                 
+                    </mat-form-field>
+                </div>              
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-sm-12">                
+                    <mat-form-field appearance="outline" style="width:100%">
+                        <mat-label>Descripción</mat-label>
+                        <textarea matInput autocomplete="off" formControlName="descripcion" id="descripcion" maxlength="1000" rows="10">
+                        </textarea>                        
+                        <mat-error *ngIf="formTarea.get('descripcion')?.errors?.['required']">                            
+                            La descripción es obligatoria
+                        </mat-error>                                              
+                    </mat-form-field>                                  
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" class="boton" mat-raised-button color="accent" [disabled]="formTarea.invalid" style="justify-content: flex-end;" matTooltip="Guardar" matTooltipPosition="above"><mat-icon class="icono-boton">save</mat-icon></button> &nbsp;&nbsp;
+            <button type="button" class="boton boton-grilla" mat-raised-button color="accent"(click)="Volver()" style="justify-content: flex-end;" matTooltip="Volver" matTooltipPosition="above"><mat-icon class="icono-boton">keyboard_return</mat-icon></button>
+        </mat-card-actions>
+    </mat-card>
+</form>

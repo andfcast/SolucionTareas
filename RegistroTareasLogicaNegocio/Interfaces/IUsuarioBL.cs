@@ -9,6 +9,6 @@ namespace RegistroTareasLogicaNegocio.Interfaces
 {
     public interface IUsuarioBL
     {
-        RespuestaDto Insertar(UsuarioDto dto);
+        RespuestaDto Insertar(RegistroUsuarioDto dto);
     }
 }

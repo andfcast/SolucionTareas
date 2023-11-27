@@ -12,3 +12,4 @@ D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\ref\RegistroTa
 D:\Pruebas\SolucionTareas\RegistroTareasEntities\bin\Debug\net6.0\RegistroTareasEntities.runtimeconfig.json
 D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.csproj.AssemblyReference.cache
 D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.genruntimeconfig.cache
+D:\Pruebas\SolucionTareas\RegistroTareasEntities\obj\Debug\net6.0\RegistroTareasEntities.sourcelink.json

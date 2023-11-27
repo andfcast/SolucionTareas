@@ -24,17 +24,18 @@ export class CrearTareaComponent {
         descripcion:['', Validators.required],
         fechaInicio:['', Validators.required],
         fechaFin:['', Validators.required],        
-        horas:['', Validators.required, Validators.max(1000), Validators.min(0)]        
+        horas:['', Validators.required, Validators.max(1000), Validators.min(1)]        
       });      
   }
   Guardar(){
     const valoresForm = this.formTarea.value;      
+    const infoUsuario = localStorage.getItem('userInfo');
     this.tarea.nombre = valoresForm.nombre;
     this.tarea.descripcion = valoresForm.descripcion;
     this.tarea.fechaFin = valoresForm.fechaFin;
     this.tarea.fechaInicio = valoresForm.fechaInicio;   
-    this.tarea.horas = valoresForm.horas;    
-    this.tarea.idUsuario = 1;     
+    this.tarea.horas = valoresForm.horas;  
+    this.tarea.idUsuario = JSON.parse(infoUsuario!).id     
     this.tarea.fechaCreacion = new Date();
     this.service.Crear(this.tarea).subscribe((data:any) =>{
       if(data.exitoso){
@@ -57,7 +58,7 @@ export class CrearTareaComponent {
       });
       }   
       setTimeout(() => {           
-        this.router.navigateByUrl('/');    
+        this.router.navigateByUrl('/dashboard');    
       },1500);
     },
     error =>{
@@ -72,6 +73,6 @@ export class CrearTareaComponent {
     });
   }
   Volver(){
-    this.router.navigateByUrl(Utilities.CambioUrl(this.router.url,1) +'/tareas');
+    this.router.navigateByUrl(Utilities.CambioUrl(this.router.url,2) +'/tareas');
   }
 }

@@ -21,7 +21,7 @@ namespace RegistroTareasLogicaNegocio.Implementacion
             respuesta.Exitoso = _entidadDal.Autenticar(dto);
             if (respuesta.Exitoso)
             {
-                UsuarioDto usuario = _usuarioDal.ObtenerInfo(dto.Usuario);
+                AutenticadoDto usuario = _usuarioDal.ObtenerInfo(dto.Usuario);
                 respuesta.Data = usuario;
             }
             else {

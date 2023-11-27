@@ -4,3 +4,10 @@ export class Usuario {
     email!:string;
     pass!:string;    
 }
+
+export class UsuarioAutenticado {
+    id!:number;
+    nombre!:string;
+    email!:string;
+    token!:string;    
+}

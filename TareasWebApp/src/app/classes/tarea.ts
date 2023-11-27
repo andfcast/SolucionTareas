@@ -6,7 +6,7 @@ export class Tarea {
     fechaInicio!:Date;
     fechaFin!:Date;
     horas!:number;
-    esCompletada:boolean = false;
+    esCompletada!:boolean;
     fechaCreacion!:Date;
     fechaModificacion!:Date;
 }

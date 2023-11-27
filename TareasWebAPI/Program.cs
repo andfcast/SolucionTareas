@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using RegistroTareasAccesoDatos.Implementacion;
 using RegistroTareasAccesoDatos.Interfaces;
 using RegistroTareasEntities.BDEntities;
 using RegistroTareasLogicaNegocio.Implementacion;
 using RegistroTareasLogicaNegocio.Interfaces;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +26,18 @@ builder.Services.AddCors(options =>
                             .AllowAnyMethod();
                       });
 });
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
+                .GetBytes(builder.Configuration.GetSection("AppSettings:Token").Value)),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
 builder.Services.AddDbContext<RegistroTareasBDContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("RegistroBDConnection")));
 
@@ -45,6 +60,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors();
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -43,7 +43,7 @@
             </ng-container>
             <ng-container matColumnDef="Estado">
                 <th mat-header-cell *matHeaderCellDef class="cabecera-tabla"> Estado </th>
-                <td mat-cell *matCellDef="let element"> {{element.completado ? 'Completada' : 'Por realizar' }} </td>
+                <td mat-cell *matCellDef="let element"> {{ element.esCompletada ? 'Completada' : 'Por realizar' }} </td>
             </ng-container>
             <ng-container matColumnDef="Acciones">
                 <th mat-header-cell *matHeaderCellDef class="cabecera-tabla col-3">Acciones</th>
@@ -51,6 +51,10 @@
                     <button type="button" style="justify-content: flex-end;" (click)="Actualizar(element.id)" 
                     mat-raised-button color="accent" matTooltip="Editar">
                         <mat-icon class="icono-boton">edit</mat-icon>                    
+                    </button> &nbsp; &nbsp; &nbsp;
+                    <button *ngIf="!element.esCompletada" type="button" style="justify-content: flex-end;" (click)="Completar(element)" 
+                    mat-raised-button color="accent" matTooltip="Marcar como completada">
+                        <mat-icon class="icono-boton">alarm_on</mat-icon>                    
                     </button> &nbsp; &nbsp; &nbsp;
                     <button type="button" style="justify-content: flex-end;" (click)="Borrar(element.id)" 
                     mat-raised-button color="accent" matTooltip="Borrar">

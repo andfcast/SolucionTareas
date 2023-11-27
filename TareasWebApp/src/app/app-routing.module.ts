@@ -3,13 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
-  },  
+  },
+  
   {
     path: 'login',
     component: LoginComponent,
@@ -24,8 +26,8 @@ const routes: Routes = [
       title: 'Recuperar Clave'
     }
   },
-  { path: 'dashboard', 
-    loadChildren: () => import('./components/dashboard/dashboard.module').then(x => x.DashboardModule) 
+  { path: 'dashboard', canActivate:[AuthGuard],
+    loadChildren: () => import('./components/dashboard/dashboard.module').then(x => x.DashboardModule),    
   },
   {
     path: '**',

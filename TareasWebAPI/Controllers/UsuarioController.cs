@@ -20,7 +20,7 @@ namespace TareasWebAPI.Controllers
 
         // POST api/<TareaController>
         [HttpPost("[action]")]
-        public RespuestaDto Crear([FromBody] UsuarioDto dto)
+        public RespuestaDto Crear([FromBody] RegistroUsuarioDto dto)
         {
             return _usuarioBL.Insertar(dto);
         }

@@ -5,14 +5,17 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
 import { ActualizarTareaComponent } from './actualizar-tarea/actualizar-tarea.component';
 import { TareaComponent } from './tarea/tarea.component';
+import { AuthGuard } from '../../helpers/auth.guard';
 
 export const routes: Routes = [
-    {
-        path: '',
+  {
+    path: '',
     component: DashboardComponent,
     data: {
       title: 'Dashboard Page'
-    },
+    },    
+    canActivateChild : [AuthGuard]
+    ,
     children: [
       {
         path: '',
@@ -49,8 +52,8 @@ export const routes: Routes = [
         title: 'Configurar Plantillas de Correo'
       },
      }
- ]
-    }
+    ] 
+  }
 ]
 @NgModule({
     imports: [RouterModule.forChild(routes)],

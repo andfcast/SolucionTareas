@@ -1,1 +1,30 @@
-<p>usuario works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>       
+            <h1 class="titulo-modulo"><mat-icon class="icono-modulo">supervised_user_circle</mat-icon>Información Usuario</h1>
+        </mat-card-title>
+    </mat-card-header>
+    <br />
+    <br />
+    <br />
+    <mat-card-content>
+        <div class="row">
+            <div class="col-6 col-md-6 col-sm-12">                
+                <mat-form-field appearance="outline" style="width:100%">
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput autocomplete="off" [readonly] value="{{ usuario.nombre }}" id="nombre" maxlength="100">
+                </mat-form-field>                                  
+            </div>                                            
+            <div class="col-6 col-md-6 col-sm-12">                
+                <mat-form-field appearance="outline" style="width:100%">
+                    <mat-label>Correo</mat-label>
+                    <input matInput autocomplete="off" [readonly] value="{{ usuario.email }}" id="nombre" maxlength="100">                                              
+                </mat-form-field>                                  
+            </div>   
+        </div>            
+    </mat-card-content>
+    <mat-card-actions>
+        <button type="submit" class="boton" mat-raised-button color="accent" style="justify-content: flex-end;"(click)="Salir()" matTooltip="Salir del sistema" matTooltipPosition="above"><mat-icon class="icono-boton">save</mat-icon></button> &nbsp;&nbsp;
+        <button type="button" class="boton boton-grilla" mat-raised-button color="accent"(click)="Volver()" style="justify-content: flex-end;" matTooltip="Volver" matTooltipPosition="above"><mat-icon class="icono-boton">keyboard_return</mat-icon></button>
+    </mat-card-actions>
+</mat-card>

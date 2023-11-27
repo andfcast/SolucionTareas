@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TareasWebAPI", "TareasWebAPI\TareasWebAPI.csproj", "{821601AA-8094-45BE-8711-02E7E5D30F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TareasWebAPI", "TareasWebAPI\TareasWebAPI.csproj", "{821601AA-8094-45BE-8711-02E7E5D30F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroTareasLogicaNegocio", "RegistroTareasLogicaNegocio\RegistroTareasLogicaNegocio.csproj", "{9C58ACB7-2973-4A65-9ADA-4B6E06040EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroTareasLogicaNegocio", "RegistroTareasLogicaNegocio\RegistroTareasLogicaNegocio.csproj", "{9C58ACB7-2973-4A65-9ADA-4B6E06040EE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroTareasAccesoDatos", "RegistroTareasAccesoDatos\RegistroTareasAccesoDatos.csproj", "{26A01821-3AE0-41A8-8CFE-CCE273A8138C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroTareasAccesoDatos", "RegistroTareasAccesoDatos\RegistroTareasAccesoDatos.csproj", "{26A01821-3AE0-41A8-8CFE-CCE273A8138C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroTareasEntities", "RegistroTareasEntities\RegistroTareasEntities.csproj", "{E52510D8-A71B-4C84-A3A5-83CA57BF9D55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroTareasEntities", "RegistroTareasEntities\RegistroTareasEntities.csproj", "{E52510D8-A71B-4C84-A3A5-83CA57BF9D55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroTareasUtilities", "RegistroTareasUtilities\RegistroTareasUtilities.csproj", "{60BA9598-9B9F-4BDA-A938-39C0ED366251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E52510D8-A71B-4C84-A3A5-83CA57BF9D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E52510D8-A71B-4C84-A3A5-83CA57BF9D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E52510D8-A71B-4C84-A3A5-83CA57BF9D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60BA9598-9B9F-4BDA-A938-39C0ED366251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BA9598-9B9F-4BDA-A938-39C0ED366251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BA9598-9B9F-4BDA-A938-39C0ED366251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BA9598-9B9F-4BDA-A938-39C0ED366251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

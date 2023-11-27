@@ -4,7 +4,7 @@ namespace RegistroTareasAccesoDatos.Interfaces
 {
     public interface IUsuarioDAL
     {
-        bool Crear(UsuarioDto dto, ref string error);
-        UsuarioDto ObtenerInfo(string nomUsuario);
+        bool Crear(RegistroUsuarioDto dto, ref string error);
+        AutenticadoDto ObtenerInfo(string nomUsuario);
     }
 }

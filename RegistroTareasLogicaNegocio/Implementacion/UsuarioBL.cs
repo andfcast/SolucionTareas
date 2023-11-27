@@ -12,7 +12,7 @@ namespace RegistroTareasLogicaNegocio.Implementacion
             _entidadDal = entidadDal;
         }
 
-        public RespuestaDto Insertar(UsuarioDto dto)
+        public RespuestaDto Insertar(RegistroUsuarioDto dto)
         {
             string msgProceso = "OK";
             bool esExitoso = _entidadDal.Crear(dto, ref msgProceso);

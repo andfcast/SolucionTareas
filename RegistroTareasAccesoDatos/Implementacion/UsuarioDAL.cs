@@ -13,7 +13,7 @@ namespace RegistroTareasAccesoDatos.Implementacion
         {
             _context = context;
         }
-        public bool Crear(UsuarioDto dto, ref string error)
+        public bool Crear(RegistroUsuarioDto dto, ref string error)
         {
             try
             {
@@ -34,9 +34,9 @@ namespace RegistroTareasAccesoDatos.Implementacion
             }
         }
 
-        public UsuarioDto ObtenerInfo(string nomUsuario)
+        public AutenticadoDto ObtenerInfo(string nomUsuario)
         {
-            return Convertidor.AUsuarioDto(_context.Usuarios.FirstOrDefault(x => x.Email == nomUsuario)!);
+            return Convertidor.AUsuarioAutenticadoDto(_context.Usuarios.FirstOrDefault(x => x.Email == nomUsuario)!);
         }
     }
 }

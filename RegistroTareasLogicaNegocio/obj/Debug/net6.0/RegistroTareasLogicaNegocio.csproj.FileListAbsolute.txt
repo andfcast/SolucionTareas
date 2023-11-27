@@ -15,3 +15,4 @@ D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroT
 D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\refint\RegistroTareasLogicaNegocio.dll
 D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.pdb
 D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\ref\RegistroTareasLogicaNegocio.dll
+D:\Pruebas\SolucionTareas\RegistroTareasLogicaNegocio\obj\Debug\net6.0\RegistroTareasLogicaNegocio.sourcelink.json
